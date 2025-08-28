@@ -44,3 +44,22 @@ This folder contains example classes to demonstrate the most commonly used **Str
 * **`groupingBy()`** → Groups elements by a classifier function (e.g., string length).
 * **`partitioningBy()`** → Splits elements into two groups based on a predicate (true/false).
 * **`groupingBy + mapping`** → Combines grouping and transformation in a single step (e.g., uppercase elements grouped by length).
+
+### ParallelStreams.java
+**Purpose:** Demonstrates sequential vs parallel stream processing and compares execution time.
+
+
+**Key Concepts:**
+- `stream()` → sequential processing (single thread).
+- `parallelStream()` → parallel processing using multiple threads.
+- Shows how parallel streams can speed up processing for large or expensive computations.
+
+### CustomCollector.java
+**Purpose:** Demonstrates a **custom collector** for more complex accumulation.
+
+
+**Key Concepts:**
+- Accumulate elements in **custom data structures** (e.g., `Map<Character, Set<String>>`).
+- Can **transform** elements during accumulation (e.g., uppercase).
+- Combiner is required for parallel streams, but can be simplified for sequential streams.
+- Useful when standard collectors (`toList()`, `joining()`) are insufficient
